@@ -1,0 +1,68 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Directory from "../components/Directory.astro";
+import { displayTitle, allEntriesNewest, entryById, catalog, SITE_NAME } from "../lib/catalog";
+
+const visibleEntries = allEntriesNewest();
+const visibleTotal = visibleEntries.length;
+
+const startPath = [
+  { id: "help-get-started", label: "开始使用", hint: "Meta 账号登录，发第一条消息" },
+  { id: "help-permissions", label: "先调审批", hint: "改成「总是询问」再连邮箱" },
+  { id: "research-safety-secure-vm", label: "它凭什么拿你的凭据", hint: "Secure VM 与 Sentinel" },
+]
+  .map((step) => ({ ...step, entry: entryById(step.id) }))
+  .filter((step) => Boolean(step.entry));
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: SITE_NAME,
+  description: "Meta Muse（muse.ai）个人 AI 智能体的非官方中文目录。",
+  numberOfItems: visibleTotal,
+  itemListElement: visibleEntries.map((entry, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: displayTitle(entry),
+    url: entry.url,
+    description: entry.blurb,
+  })),
+};
+---
+
+<Base
+  title={`${SITE_NAME} · Meta Muse 非官方中文导航`}
+  description="Meta Muse（muse.ai）个人 AI 智能体的非官方中文目录：官方文档、教程、连接器、评测与踩坑。不收 Discord 音乐机器人、Muse Bot Builder 或纯模型评测。"
+>
+  <Header />
+  <main id="main" tabindex="-1">
+    <section class="hero hero-home">
+      <div class="wrap">
+        <p class="badge">非官方 · 更新于 {catalog.updated}</p>
+        <h1>Muse Bot 目录</h1>
+        <p class="tagline">
+          Meta Muse（muse.ai）个人 AI 智能体的中文导航。它是一台替你干活的常驻云电脑，不是又一个聊天框；
+          本站只收这一个产品，不收 Discord 音乐机器人、Muse Bot Builder，也不收只评模型的文章。
+        </p>
+        <ol class="start-path" aria-label="从哪开始">
+          {
+            startPath.map((step, index) => (
+              <li>
+                <a href={step.entry!.url} rel="noopener noreferrer" target="_blank">
+                  <span class="start-step">{index + 1}</span>
+                  <span class="start-label">{step.label}</span>
+                  <span class="start-hint">{step.hint}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </section>
+    <Directory />
+  </main>
+  <Footer />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
+</Base>

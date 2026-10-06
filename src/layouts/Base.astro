@@ -1,0 +1,85 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  noindex?: boolean;
+  ogImage?: string;
+  ogImageAlt?: string;
+  canonicalHref?: string;
+}
+
+const {
+  title,
+  description = "Meta Muse（muse.ai）个人 AI 智能体的非官方中文目录。精选官方文档、教程、连接器和踩坑，不是 Discord 音乐机器人。",
+  noindex = false,
+  ogImage: ogImageFile = "og.png",
+  ogImageAlt = "Muse Bot 目录：Meta Muse 个人智能体的中文目录，非官方",
+  canonicalHref,
+} = Astro.props;
+
+function withDirSlash(href: string): string {
+  try {
+    const url = new URL(href);
+    if (!url.pathname.endsWith("/")) {
+      const last = url.pathname.split("/").pop() ?? "";
+      if (!last.includes(".")) url.pathname += "/";
+    }
+    return url.href;
+  } catch {
+    return href.endsWith("/") ? href : `${href}/`;
+  }
+}
+
+const canonical = withDirSlash(canonicalHref ?? new URL(Astro.url.pathname, Astro.site).href);
+const base = import.meta.env.BASE_URL;
+const origin = Astro.site ?? new URL("https://ddhjy.github.io");
+const basePath = base.endsWith("/") ? base : `${base}/`;
+const ogImage = new URL(`${basePath}${ogImageFile}`, origin).href;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={`${basePath}favicon.svg`} type="image/svg+xml" />
+    <link rel="icon" href={`${basePath}favicon.ico`} sizes="any" />
+    <link rel="apple-touch-icon" href={`${basePath}apple-touch-icon.png`} sizes="180x180" />
+    <meta name="theme-color" content="#1a1a1a" />
+    <meta name="author" content="KAI ddhjy" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+    <slot />
+    <script is:inline>
+      document.querySelector(".skip-link")?.addEventListener("click", (event) => {
+        event.preventDefault();
+        const main = document.getElementById("main");
+        if (!main) return;
+        main.focus();
+        if (location.hash === "#main") {
+          history.replaceState(history.state, "", `${location.pathname}${location.search}`);
+        }
+      });
+    </script>
+  </body>
+</html>
