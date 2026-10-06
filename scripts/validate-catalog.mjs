@@ -1,0 +1,254 @@
+#!/usr/bin/env node
+import { readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const REQUIRED_SECTIONS = [
+  "official",
+  "tutorials",
+  "cases",
+  "skills",
+  "reviews",
+  "alternatives",
+  "community",
+];
+
+const REQUIRED_LABELS = {
+  official: "官方资源",
+  tutorials: "教程",
+  cases: "实战案例",
+  skills: "技能/连接器/MCP",
+  reviews: "评测对比",
+  alternatives: "开源替代",
+  community: "社区与坑",
+};
+
+const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const CHINESE_PERIOD = "。";
+// Closed set. Keep in sync with CATALOG.zh.md § 标签闭集.
+const ALLOWED_TAGS = [
+  "坑",
+  "上手",
+  "文档",
+  "排障",
+  "用量",
+  "安全",
+  "编制",
+  "电脑操作",
+  "插件",
+  "视频",
+  "开源",
+  "对比",
+  "购物",
+  "小企业",
+  "日文",
+];
+const MAX_TAGS = 5;
+
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const catalogPath = join(root, "data/catalog.json");
+
+function fail(message) {
+  console.error(`catalog: ${message}`);
+  process.exitCode = 1;
+}
+
+function isHttpUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" || url.protocol === "http:";
+  } catch {
+    return false;
+  }
+}
+
+const raw = readFileSync(catalogPath, "utf8");
+let catalog;
+
+try {
+  catalog = JSON.parse(raw);
+} catch (error) {
+  fail(`无法解析 JSON：${error instanceof Error ? error.message : error}`);
+  process.exit(1);
+}
+
+if (!catalog || typeof catalog !== "object" || Array.isArray(catalog)) {
+  fail("根对象必须是 JSON object。");
+  process.exit(1);
+}
+
+if (!Array.isArray(catalog.sections)) {
+  fail("缺少 sections 数组。");
+  process.exit(1);
+}
+
+if (!Array.isArray(catalog.entries)) {
+  fail("缺少 entries 数组。");
+  process.exit(1);
+}
+
+const sectionIds = catalog.sections.map((section) => section?.id);
+if (sectionIds.join(",") !== REQUIRED_SECTIONS.join(",")) {
+  fail(
+    `sections 的 id 顺序必须是：${REQUIRED_SECTIONS.join(", ")}，实际为：${sectionIds.join(", ")}。`,
+  );
+}
+
+for (const id of REQUIRED_SECTIONS) {
+  const section = catalog.sections.find((item) => item?.id === id);
+  if (!section) {
+    fail(`缺少分区 ${id}。`);
+    continue;
+  }
+  if (section.label !== REQUIRED_LABELS[id]) {
+    fail(`分区 ${id} 的 label 应为「${REQUIRED_LABELS[id]}」，实际为「${section.label}」。`);
+  }
+}
+
+const ids = new Set();
+const urls = new Set();
+let entryIndex = 0;
+
+for (const entry of catalog.entries) {
+  entryIndex += 1;
+  const where = `entries[${entryIndex - 1}]${entry?.id ? ` (${entry.id})` : ""}`;
+
+  if (!entry || typeof entry !== "object") {
+    fail(`${where} 必须是对象。`);
+    continue;
+  }
+
+  for (const key of ["id", "title", "url", "blurb", "section"]) {
+    if (typeof entry[key] !== "string" || entry[key].trim() === "") {
+      fail(`${where} 缺少非空字段 ${key}。`);
+    }
+  }
+
+  // Future daily harvests must set added to that day's Asia/Shanghai date.
+  if (typeof entry.added !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(entry.added)) {
+    fail(`${where} added 须为 YYYY-MM-DD 字符串。`);
+  }
+
+  if (typeof entry.id === "string" && !ID_PATTERN.test(entry.id)) {
+    fail(`${where} id 须为小写 kebab-case。`);
+  }
+
+  if (typeof entry.id === "string") {
+    if (ids.has(entry.id)) fail(`${where} 重复 id。`);
+    ids.add(entry.id);
+  }
+
+  if (typeof entry.url === "string") {
+    if (!isHttpUrl(entry.url)) fail(`${where} url 不是合法的 http(s) 地址。`);
+    if (urls.has(entry.url)) fail(`${where} 重复 url。`);
+    urls.add(entry.url);
+  }
+
+  if (typeof entry.section === "string" && !REQUIRED_SECTIONS.includes(entry.section)) {
+    fail(`${where} section「${entry.section}」不在允许列表中。`);
+  }
+
+  if (typeof entry.blurb === "string") {
+    const blurb = entry.blurb.trim();
+    if (!blurb.endsWith(CHINESE_PERIOD)) {
+      fail(`${where} blurb 必须以中文句号「。」结尾。`);
+    }
+    const body = blurb.slice(0, -1);
+    if (body.includes(CHINESE_PERIOD) || /\.\s/.test(body)) {
+      fail(`${where} blurb 必须是一句中文，中间不要再出现句号。`);
+    }
+    if (blurb.length < 12) {
+      fail(`${where} blurb 过短。`);
+    }
+  }
+
+  if (typeof entry.blurb === "string") {
+    const opener = entry.blurb.trim();
+    if (/^(说明如何|文档写明|介绍如何|介绍了|演示如何)/.test(opener)) {
+      fail(`${where} blurb 不要用「说明如何 / 文档写明 / 介绍… / 演示如何」开头，写清为什么要点。`);
+    }
+  }
+
+  if (typeof entry.title === "string" && !/[\u4e00-\u9fff]/.test(entry.title)) {
+    fail(`${where} title 需要中文译名或注解，不要只写英文或仓库 slug。`);
+  }
+
+  if (entry.tags !== undefined) {
+    if (!Array.isArray(entry.tags) || entry.tags.some((tag) => typeof tag !== "string" || tag.trim() === "")) {
+      fail(`${where} tags 必须是非空字符串数组。`);
+    } else if (entry.tags.length > MAX_TAGS) {
+      fail(`${where} tags 最多 ${MAX_TAGS} 个，专有名词放 aliases。`);
+    } else {
+      const seen = new Set();
+      for (const tag of entry.tags) {
+        if (!ALLOWED_TAGS.includes(tag)) {
+          fail(`${where} 标签「${tag}」不在允许列表：${ALLOWED_TAGS.join("、")}。`);
+        }
+        if (seen.has(tag)) fail(`${where} 重复标签「${tag}」。`);
+        seen.add(tag);
+      }
+    }
+  }
+
+  if (entry.aliases !== undefined) {
+    if (
+      !Array.isArray(entry.aliases) ||
+      entry.aliases.some((alias) => typeof alias !== "string" || alias.trim() === "")
+    ) {
+      fail(`${where} aliases 必须是非空字符串数组。`);
+    }
+  }
+
+  const clusters = new Set(["start", "computer", "billing", "safety"]);
+  if (entry.cluster !== undefined) {
+    if (typeof entry.cluster !== "string" || !clusters.has(entry.cluster)) {
+      fail(`${where} cluster 只能是 start / computer / billing / safety。`);
+    }
+    if (entry.section !== "official") {
+      fail(`${where} 只有 official 条目可以带 cluster。`);
+    }
+  }
+
+  if (entry.featured !== undefined) {
+    if (entry.featured !== true && entry.featured !== false) {
+      fail(`${where} featured 只能是 boolean。`);
+    }
+    if (entry.featured && entry.section !== "official") {
+      fail(`${where} 只有 official 条目可以标 featured。`);
+    }
+  }
+}
+
+const count = catalog.entries.length;
+if (count < 40 || count > 1550) {
+  fail(`条目数量应为 40–1550，当前为 ${count}。`);
+}
+
+if (typeof catalog.updated !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(catalog.updated)) {
+  fail("updated 须为 YYYY-MM-DD 字符串（上海时区）。");
+}
+
+const TRACKING_PARAMS = /[?&](utm_[a-z]+|fbclid|gclid|ref|share_id|spm)=/i;
+for (const entry of catalog.entries) {
+  if (typeof entry.url === "string" && TRACKING_PARAMS.test(entry.url)) {
+    fail(`entries (${entry.id}) url 带跟踪参数，请去掉。`);
+  }
+  if (typeof entry.url === "string" && !entry.url.startsWith("https://")) {
+    fail(`entries (${entry.id}) url 必须是 https 地址。`);
+  }
+}
+
+if (process.exitCode) {
+  console.error(`校验失败：${catalogPath}`);
+  process.exit(process.exitCode);
+}
+
+const bySection = Object.fromEntries(REQUIRED_SECTIONS.map((id) => [id, 0]));
+for (const entry of catalog.entries) {
+  bySection[entry.section] += 1;
+}
+
+console.log(`catalog OK：${count} 条`);
+for (const id of REQUIRED_SECTIONS) {
+  console.log(`  ${REQUIRED_LABELS[id]} (${id}): ${bySection[id]}`);
+}

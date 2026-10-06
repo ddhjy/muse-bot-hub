@@ -1,0 +1,156 @@
+---
+import {
+  allEntriesNewest,
+  catalogTagStats,
+  searchPrimary,
+  searchBlurb,
+  searchUrl,
+  shareQueries,
+  type CatalogEntry,
+} from "../lib/catalog";
+import { isActiveQuery, matchesQuery, normalizeQuery } from "../lib/query";
+import CatalogCard from "./CatalogCard.astro";
+
+interface Props {
+  searchPage?: boolean;
+  initialQuery?: string;
+  initialTag?: string;
+}
+
+const { searchPage = false, initialQuery = "", initialTag = "" } = Astro.props;
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const entries = allEntriesNewest();
+const tags = catalogTagStats();
+const documentedQueries = shareQueries();
+const activeInitialQuery = isActiveQuery(normalizeQuery(initialQuery)) ? normalizeQuery(initialQuery) : "";
+const emptySearchPage = searchPage && !activeInitialQuery;
+
+function cardAttrs(entry: CatalogEntry) {
+  const hiddenBySearch =
+    emptySearchPage ||
+    (activeInitialQuery
+      ? !matchesQuery(searchPrimary(entry), searchBlurb(entry), activeInitialQuery, {
+          url: searchUrl(entry),
+          section: entry.section,
+        })
+      : false);
+  const hiddenByTag = initialTag ? !(entry.tags ?? []).includes(initialTag) : false;
+  return {
+    "data-card": true,
+    "data-id": entry.id,
+    "data-added": entry.added ?? "",
+    "data-section": entry.section,
+    "data-tags": (entry.tags ?? []).join("\t"),
+    "data-search": searchPrimary(entry),
+    "data-search-blurb": searchBlurb(entry),
+    "data-search-url": searchUrl(entry),
+    hidden: hiddenBySearch || hiddenByTag || undefined,
+  };
+}
+
+function tagHref(tag: string): string {
+  if (!tag) return base;
+  const url = new URL(base, "https://ddhjy.github.io");
+  url.searchParams.set("tag", tag);
+  return `${url.pathname}${url.search}`;
+}
+---
+
+<div
+  class:list={["directory", searchPage && "is-search-page", activeInitialQuery && "is-searching"]}
+  data-directory
+  data-base={base}
+  data-search-page={searchPage ? "true" : undefined}
+  data-search-docs={documentedQueries.join("\n")}
+>
+  <div class="toolbar">
+    <div class="wrap toolbar-inner">
+      <div class="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"></circle>
+          <path d="M20 20l-3.2-3.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        </svg>
+        <input
+          type="search"
+          data-search
+          placeholder="搜索"
+          data-placeholder-long="搜索标题"
+          data-placeholder-short="搜索目录"
+          data-placeholder-compact="搜索"
+          value={initialQuery}
+          autocomplete="off"
+          enterkeyhint="search"
+          aria-label="搜索目录"
+        />
+        <kbd aria-hidden="true">/</kbd>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="filters-wrap">
+      <div class="filters" role="group" aria-label="按标签筛选" data-filters>
+        <a
+          class="filter"
+          href={base}
+          data-filter=""
+          data-label="全部"
+          aria-pressed={initialTag ? "false" : "true"}
+        >
+          <span class="chip-text">全部</span>
+          <span class="count" data-count data-dest-count={entries.length}>{entries.length}</span>
+        </a>
+        {
+          tags.map((item) => (
+            <a
+              class="filter"
+              href={tagHref(item.tag)}
+              data-filter={item.tag}
+              data-label={item.tag}
+              aria-pressed={initialTag === item.tag ? "true" : "false"}
+            >
+              <span class="chip-text">{item.tag}</span>
+              <span class="count" data-count data-dest-count={item.count}>
+                {item.count}
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <span class="visually-hidden" data-result-live aria-live="polite" aria-atomic="true"></span>
+
+    <div class="empty" data-empty hidden={emptySearchPage ? undefined : true}>
+      <p class="empty-title" data-empty-title>{emptySearchPage ? "输入关键词" : "没有匹配的条目"}</p>
+      <p class="empty-copy" data-empty-copy>
+        {emptySearchPage ? "在目录里搜标题、别名和标签。" : "换个词试试，或清空筛选。"}
+      </p>
+      <div class="empty-actions">
+        <button type="button" class="btn-primary" data-clear-search>清空搜索</button>
+        <button type="button" class="btn-ghost" data-reset>查看全部</button>
+      </div>
+      <p class="empty-suggest">
+        试试
+        <button type="button" data-suggest-tag="上手">上手</button>
+        <button type="button" data-suggest-tag="安全">安全</button>
+        <button type="button" data-suggest-tag="插件">插件</button>
+      </p>
+    </div>
+
+    <div class="feed">
+      {
+        entries.map((entry) => (
+          <CatalogCard entry={entry} attrs={cardAttrs(entry)} heading="h2" />
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<script>
+  import { initDirectory } from "../scripts/directory";
+  initDirectory();
+</script>

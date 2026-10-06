@@ -1,0 +1,21 @@
+{
+  "name": "muse-bot-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "非官方 Meta Muse 资源导航：Git 管内容，静态站给人看。",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "validate": "node scripts/validate-catalog.mjs && node scripts/check-search.mjs",
+    "og": "node scripts/write-og-cards.mjs && python3 scripts/generate-og.py",
+    "build": "node scripts/validate-catalog.mjs && node scripts/check-search.mjs && node scripts/write-og-cards.mjs && python3 scripts/generate-og.py && astro build",
+    "preview": "astro preview"
+  },
+  "engines": {
+    "node": ">=20.3.0"
+  },
+  "dependencies": {
+    "astro": "^5.13.2"
+  }
+}

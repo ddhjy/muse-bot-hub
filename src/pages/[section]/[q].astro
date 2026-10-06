@@ -1,0 +1,15 @@
+---
+import { shareSectionQueryPairs } from "../../lib/catalog";
+
+export function getStaticPaths() {
+  return shareSectionQueryPairs()
+    .filter((item) => item.section !== "takes")
+    .map((item) => ({ params: { section: item.section, q: item.q } }));
+}
+
+const home = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const q = Astro.params.q ?? "";
+return Astro.redirect(`${home}search/${encodeURIComponent(q)}/`, 308);
+---

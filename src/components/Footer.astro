@@ -1,0 +1,25 @@
+---
+interface Props {
+  showHome?: boolean;
+}
+
+const { showHome = false } = Astro.props;
+const raw = import.meta.env.BASE_URL;
+const home = raw.endsWith("/") ? raw : `${raw}/`;
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p>非官方社区目录，与 Meta、muse.ai 无隶属、赞助或合作关系。</p>
+      <p class="footer-license">代码 MIT · 目录 CC0 1.0 · 2026 KAI ddhjy</p>
+    </div>
+    <nav class="footer-links" aria-label="页脚链接">
+      {showHome && <a href={home}>首页</a>}
+      <a href="https://github.com/ddhjy/muse-bot-hub">GitHub</a>
+      <a href="https://muse.ai/">官方产品页</a>
+      <a href="https://ddhjy.github.io/grok-bot-hub/">姊妹站：Grok Bot 目录</a>
+      <a href="https://github.com/ddhjy/muse-bot-hub/blob/main/CONTRIBUTING.zh.md">如何提交一条</a>
+    </nav>
+  </div>
+</footer>

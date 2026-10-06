@@ -1,0 +1,12 @@
+---
+import { SECTION_IDS } from "../lib/catalog";
+
+export function getStaticPaths() {
+  return SECTION_IDS.map((section) => ({ params: { section } }));
+}
+
+const home = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+return Astro.redirect(home, 308);
+---

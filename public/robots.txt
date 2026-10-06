@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ddhjy.github.io/muse-bot-hub/sitemap.xml
