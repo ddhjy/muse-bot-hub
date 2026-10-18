@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "sections": [
     { "id": "official", "label": "官方资源" },
     { "id": "tutorials", "label": "教程" },
@@ -2180,6 +2180,76 @@
       "aliases": ["X"]
     },
     {
+      "id": "reddit-1x7qigg-another-interesting-call",
+      "added": "2026-10-19",
+      "title": "用 Muse 外呼给泌尿科诊所约复诊，前台听完转写声明后仍接了（英文）",
+      "url": "https://www.reddit.com/r/MuseAgent/comments/1x7qigg/another_interesting_call/",
+      "blurb": "已经开通外呼、想看真实商家通话的人，可以对照这条 10 月 16 日给泌尿科诊所约复诊的逐字稿：Brett 会报在代谁致电并声明转写，没有姓氏可报、档期只变成留言、对方要回拨给本人；评论里有人当天被前台一听转写就挂断，功能仍按账号灰度，作者打算下次声明所在州是单方同意录音州以免再播报。",
+      "section": "cases",
+      "tags": ["坑", "上手"],
+      "aliases": ["Reddit"]
+    },
+    {
+      "id": "reddit-1x8hl52-muse-made-me-an-app-for-my-phone",
+      "added": "2026-10-19",
+      "title": "先用 Canva 画稿，再让 Muse 做成可加到主屏幕的退休计算器（英文）",
+      "url": "https://www.reddit.com/r/MuseAgent/comments/1x8hl52/muse_made_me_an_app_for_my_phone/",
+      "blurb": "没有编程基础、想给自己做一个能改数字的退休测算页的人，可以看作者先在 Canva 画计算器再把截图交给 Muse 打磨，iPhone 上用 Safari 分享里的「添加到主屏幕」当应用打开；它不在 App Store、作者说没塞进隐私财务数据，楼里也有人只做成 Muse 应用内页面、在 Safari 打不开。",
+      "section": "cases",
+      "tags": ["上手", "编制"],
+      "aliases": ["Reddit"]
+    },
+    {
+      "id": "reddit-1x8iqum-the-naysayers-say-ai-tools-cant-work-together",
+      "added": "2026-10-19",
+      "title": "用 Muse 云电脑浏览器登录 Venice，两夜剪出一条 4K 混剪（英文）",
+      "url": "https://www.reddit.com/r/MuseAgent/comments/1x8iqum/the_naysayers_say_ai_tools_cant_work_together/",
+      "blurb": "想让 Muse 当导演和剪辑、自己只做选曲的人，可以看退休电气工程师这条：它在自己的浏览器里登录 Venice、用 Grok Imagine 出五段默片再本地补帧，成片 3840×2160、五十八秒、全片扫描无黑帧；片源是作者自己的换脸混剪，成片链到 Facebook，楼里有人怀疑是不是玩笑。",
+      "section": "cases",
+      "tags": ["视频", "电脑操作"],
+      "aliases": ["Reddit"]
+    },
+    {
+      "id": "reddit-1x8wgb8-two-months-with-metas-muse-the-assistant-that",
+      "added": "2026-10-19",
+      "title": "两个月把 Muse 当成夜班：半小时扫仓库、每小时只汇报邮件（英文）",
+      "url": "https://www.reddit.com/r/MetaAI/comments/1x8wgb8/two_months_with_metas_muse_the_assistant_that/",
+      "blurb": "想让 Muse 在自己不在时继续干活的人，可以看这条两个月写法：每三十分钟扫侧项目仓库、一次只开一个隔离 worktree 并留下待审 PR，每小时只按重要程度编号汇报未读邮件、作者改过一次擅自归档后它不再动邮件，周一用简报替代订阅；文末带邀请码，评论有人把它当成软广。",
+      "section": "cases",
+      "tags": ["上手", "编制", "电脑操作"],
+      "aliases": ["Reddit"]
+    },
+    {
+      "id": "substack-p-ive-changed-my-opinion-on-dots",
+      "added": "2026-10-19",
+      "title": "Muse 没等审批就发了社媒，作者把商务改交给 Dots（英文）",
+      "url": "https://taylorarndt.substack.com/p/ive-changed-my-opinion-on-dots",
+      "blurb": "已经把社媒交给 Muse 的人，能看到作者 10 月 13 日做直播时它跳过预期审批发出了帖子，还曾用错邮箱去订一项服务，于是把 Muse 留在个人琐事、把商务改交给 Dots，读屏下 Dots 的登录框仍不好找。",
+      "section": "cases",
+      "tags": ["坑", "上手", "编制"],
+      "aliases": ["Substack"]
+    },
+    {
+      "id": "x-simonsmith-835865",
+      "added": "2026-10-19",
+      "title": "后台同步本机 Apple 日历，并主动起草工作会议要点（英文）",
+      "url": "https://x.com/_simonsmith/status/2111842427157835865",
+      "blurb": "工作日历没接到云端、却发现 Muse 已经写好会前要点的人，可以看这条：它从手机和 Mac 上的 Apple 日历（含个人、家庭和工作）后台同步，再用来准备会议；帖里没有权限开关和同步范围，有人回复 Dots 昨天也对他说做过类似的事。",
+      "section": "cases",
+      "tags": ["上手", "电脑操作"],
+      "aliases": ["X"]
+    },
+    {
+      "id": "youtube-hrrftytyufs",
+      "added": "2026-10-19",
+      "title": "让 Muse 当调度：读完十七年 Facebook，再指挥 Claude 和 Codex",
+      "url": "https://www.youtube.com/watch?v=hRrftyTYuFs",
+      "blurb": "已经同时开着 Claude Code 和 ChatGPT Codex、还想把 Facebook 历史交给 Muse 的人，能看到他把十七年贴文抽样做成人生侧写、让 Muse 当分派入口去调度那两套工具并按额度选模型，以及关电脑后排程发社群、把滑到的内容丢给 Muse，通读贴文会把每周额度打得很凶，片尾挂着个人品牌课。",
+      "section": "cases",
+      "tags": ["视频", "上手", "电脑操作", "用量"],
+      "aliases": ["YouTube"]
+    },
+    {
       "id": "awesome-muse-connectors",
       "added": "2026-10-06",
       "title": "社区连接器目录：awesome-muse-connectors",
@@ -3380,6 +3450,86 @@
       "aliases": ["Reddit"]
     },
     {
+      "id": "github-breno12321-muse-watch",
+      "added": "2026-10-19",
+      "title": "muse-watch：经 iPhone 把个人 Muse 接到 Apple Watch（英文）",
+      "url": "https://github.com/breno12321/muse-watch",
+      "blurb": "想在 Apple Watch 上跟个人 Muse 说话的人，可以用这份开发签名的 Watch 与 iPhone 伴侣：手表录音后由手机本地转成文字再发出去，官方小设备语音流目前不可用所以朗读走手机上的英文模型，首次配对需要附近一台树莓派做蓝牙帮手、日常不再依赖它，应用未上架。",
+      "section": "skills",
+      "tags": ["开源", "插件", "上手", "坑"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "github-vbtwo31984-muse-proxy",
+      "added": "2026-10-19",
+      "title": "muse-proxy：给个人 Muse 做只收不发的邮件与事件入口（英文）",
+      "url": "https://github.com/vbtwo31984/muse-proxy",
+      "blurb": "云端 Muse 虚拟机收不到站外连接时，可以在自己的服务器上跑这份带测试的代理：签发只收不发的邮箱、把脚本事件推进去，虚拟机里的助手用验签过的 WebSocket 常连拉取，配对码十五分钟作废，附件抓取要单独打开白名单里的连接器。",
+      "section": "skills",
+      "tags": ["开源", "插件", "安全", "电脑操作"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "github-scrappylabsai-notes-bridge",
+      "added": "2026-10-19",
+      "title": "notes-bridge：让个人 Muse 按你的规则读写本机笔记（英文）",
+      "url": "https://github.com/scrappylabsai/notes-bridge",
+      "blurb": "笔记放在本机 Markdown、又想让个人 Muse 和其他云端助手走同一扇门的人，可以按这份约九百行的服务用 OpenAPI 做成自定义连接器，按助手身份发令牌、只读白名单目录、写入只能进各助手的收件箱，作者实测 Muse 大约一分钟接上，对外要自己开 HTTPS 隧道。",
+      "section": "skills",
+      "tags": ["开源", "插件", "安全"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "github-jeffrombit-musegadgets-firmware",
+      "added": "2026-10-19",
+      "title": "MuseGadgets-firmware：微雪 2.16 圆屏的中文社区固件",
+      "url": "https://github.com/jeffrombit/MuseGadgets-firmware",
+      "blurb": "手头是微雪 ESP32-S3-Touch-AMOLED-2.16 的人，可以按这份社区固件用 ESP-IDF 6.0.1 编译中文分页界面和原创像素角色，公开构建已通过主机测试，默认关掉自建语音、家居、通知和 OTA，构建通过不等于已经做完真机或官方账号验收。",
+      "section": "skills",
+      "tags": ["开源", "插件", "上手", "坑"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "github-ja1chen-muse-gadget-actell-mods",
+      "added": "2026-10-19",
+      "title": "muse-gadget-actell-mods：让 Muse 小设备经 Actell 操控 iPhone（英文）",
+      "url": "https://github.com/ja1chen/muse-gadget-actell-mods",
+      "blurb": "手头有微雪 2.16、并且已经在用 Actell 控 iPhone 的人，可以看这份 Gadget SDK 扩展：Muse 负责规划，设备经局域网配对后调用 Actell 的点按和截图队列，首次配对用 TOFU、挡不住局域网主动中间人，仓库不含 Actell 安装、网页控制台用的是合成截图。",
+      "section": "skills",
+      "tags": ["开源", "插件", "电脑操作", "坑"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "github-irol765-board-voice-flow",
+      "added": "2026-10-19",
+      "title": "board-voice-flow：给小设备语音稿加本地转写对照（英文）",
+      "url": "https://github.com/irol765/board-voice-flow",
+      "blurb": "小设备语音稿经常被平台听错或听成另一种语言的人，可以把这份技能交给个人 Muse，在虚拟机里用只绑本机的 SenseVoice 对照平台稿再回复，模型大约占用三百五十兆内存、一条零点三到零点七秒，音频不会离开本机。",
+      "section": "skills",
+      "tags": ["开源", "排障", "插件", "坑"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "github-maxchristianlunau-yahoo-mail-bridge",
+      "added": "2026-10-19",
+      "title": "yahoo-mail-bridge：把雅虎邮箱交给个人 Muse 的自托管接口（英文）",
+      "url": "https://github.com/maxchristianlunau/yahoo-mail-bridge",
+      "blurb": "雅虎邮箱的登录态个人 Muse 保不住、又想让它搜信读信发信的人，可以在 Render 或 Docker 上跑这份接口，雅虎应用专用密码留在你自己的机器、只把接口令牌交给 Muse，发送没有附件也没有群发。",
+      "section": "skills",
+      "tags": ["开源", "插件", "安全"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "github-thefloppytaco-baltimore-311-skill",
+      "added": "2026-10-19",
+      "title": "baltimore-311-skill：让 Muse 按巴尔的摩 311 门户代报市政单（英文）",
+      "url": "https://github.com/thefloppytaco/baltimore-311-skill",
+      "blurb": "住在巴尔的摩、想让个人 Muse 按市政 311 门户代报路面坑或垃圾漏收的人，可以把这份已对照 2026-10-15 门户核对过的技能放进 custom-skills，走访客流程不用注册，除漏收垃圾外联系邮箱都要填。",
+      "section": "skills",
+      "tags": ["开源", "上手"],
+      "aliases": ["GitHub"]
+    },
+    {
       "id": "aimultiple-always-on-agents",
       "added": "2026-10-06",
       "title": "五家常驻智能体横评：Dots、Grok Bot、Muse、Hermes、OpenClaw",
@@ -3988,6 +4138,36 @@
       "section": "reviews",
       "tags": ["对比", "上手"],
       "aliases": ["X"]
+    },
+    {
+      "id": "news-stories-meta-muse-enterprise-ai",
+      "added": "2026-10-19",
+      "title": "广告公司试了 Muse 小企业版：MCP 能管投放，银行客户用不了云端（英文）",
+      "url": "https://www.marketingbrew.com/stories/meta-muse-enterprise-ai",
+      "blurb": "想把 Muse 接到广告账户或账本的小企业，能看到 Tinuiti 试点后认为小企业投放管理器靠 MCP、适合还不熟 Ads Manager 的店铺、对企业广告主仍不够细，Arkose 觉得电脑操作比别的企业智能体强但数据进 Meta 机房、银行客户过不了审查，限制是记者本人没有上手、只采访了几家已用 Meta 广告的公司。",
+      "section": "reviews",
+      "tags": ["小企业", "插件", "安全", "电脑操作"],
+      "aliases": ["科技媒体"]
+    },
+    {
+      "id": "x-simonsmith-829968",
+      "added": "2026-10-19",
+      "title": "同时用过之后：Muse、Dots 和 Grok Bot 各适合什么（英文）",
+      "url": "https://x.com/_simonsmith/status/2111624673674829968",
+      "blurb": "三个都开过、还在选主力的人，可以看这份对照：Muse 更好上手也有 Goals 和播客，但复杂研究和查资料他不完全放心、也想要语音；Dots 能力更强、接 Slack 和插件，但慢、过程不透明、不太主动；Grok Bot 快、可开多个、邮箱要逐封审批，还会编造不存在的功能。",
+      "section": "reviews",
+      "tags": ["对比", "上手"],
+      "aliases": ["X"]
+    },
+    {
+      "id": "youtube-napaz7ei2ny",
+      "added": "2026-10-19",
+      "title": "两周后再选：Dots 当主力，Muse 只留 Marketplace（英文）",
+      "url": "https://www.youtube.com/watch?v=Napaz7EI2nY",
+      "blurb": "已经试过 Muse 和 ChatGPT Dots、还在犹豫主力放哪边的人，能听到她两周后改口把 Dots 当主力：Muse 剪她自己的片会切断句子并留下长停顿，电脑操作也更弱，Marketplace 仍留给 Muse，片子大约四分钟、没有再放失败剪辑的屏幕，也没拿付费档 Muse Wonder 对照。",
+      "section": "reviews",
+      "tags": ["视频", "对比", "电脑操作"],
+      "aliases": ["YouTube"]
     },
     {
       "id": "hermes-agent",
@@ -5267,6 +5447,16 @@
       "blurb": "刚重置 Muse 记忆、Messenger 接不上的人，可以对上这条：清记忆后连接器断开，重设六位数 PIN 仍在校验循环里打转；另有人先发现绑到了错误的 Facebook 才跳出循环，随后还是提示 PIN 错误，最后只能让 Muse 给官方开了工单，帖里没有不丢聊天记录的解绑办法。",
       "section": "community",
       "tags": ["坑", "排障", "插件"],
+      "aliases": ["Reddit"]
+    },
+    {
+      "id": "reddit-1x7xs6g-how-do-you-personally-set-up-your-main-chat-v",
+      "added": "2026-10-19",
+      "title": "主聊天和侧聊怎么分：重用户说主聊天塞满会把记忆撑爆（英文）",
+      "url": "https://www.reddit.com/r/MuseAgent/comments/1x7xs6g/how_do_you_personally_set_up_your_main_chat_vs/",
+      "blurb": "分不清什么该放主聊天、什么该开侧聊的人，可以看这楼三十多条对照：有人把主聊天当工作台、侧聊当有寿命的项目，有人让它每天夜里再归档；重用户警告主聊天每条都会重读全文、记忆文件会膨胀到主聊天卡十几分钟，侧聊共享记忆但不共享对话正文，主聊天仍会读邮件。",
+      "section": "community",
+      "tags": ["坑", "用量", "编制"],
       "aliases": ["Reddit"]
     }
   ]
