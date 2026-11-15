@@ -220,8 +220,8 @@ for (const entry of catalog.entries) {
 }
 
 const count = catalog.entries.length;
-if (count < 40 || count > 1550) {
-  fail(`条目数量应为 40–1550，当前为 ${count}。`);
+if (count < 40 || count > 5000) {
+  fail(`条目数量应为 40–5000，当前为 ${count}。`);
 }
 
 if (typeof catalog.updated !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(catalog.updated)) {
