@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "sections": [
     { "id": "official", "label": "官方资源" },
     { "id": "tutorials", "label": "教程" },
@@ -497,6 +497,26 @@
       "blurb": "准备用 Muse 买衣服、又想知道试穿和付款怎么被卡住的人，可以看 Meta 超级智能实验室的 David Singleton 这周用它挑节日毛衣时写的路径：没有商家连接器就走自带浏览器，打开前会检查站点和图片，你可以旁观或随时接管，上身效果对着那一条商品而不是一套通用造型，任何金额都要你点头，系统层还有独立的 Sentinel 在批准前不让动作上网，帖子没写要不要先传照片、也没写哪些地区已经开放。",
       "section": "official",
       "tags": ["购物", "安全", "上手"],
+      "aliases": ["X"]
+    },
+    {
+      "id": "x-dps-594293",
+      "added": "2026-11-25",
+      "title": "英国上线：每台 Muse 仍是一台云电脑，出站要过 Sentinel（英文）",
+      "url": "https://x.com/dps/status/2125113457628594293",
+      "blurb": "人在英国、十一月二十四日才打得开 Muse 的人，可以从 Meta 超级智能实验室 David Singleton 这条确认每台 Muse 跑在自己的云电脑上、出站由单独的 Sentinel 按你给的权限核对，文末链到新闻室里怎么查看它做了什么、记住了什么，帖子没有逐步的权限截图。",
+      "section": "official",
+      "tags": ["安全", "文档"],
+      "aliases": ["X"]
+    },
+    {
+      "id": "x-muse-637002",
+      "added": "2026-11-25",
+      "title": "官方：可以私信 Instagram 上的 Muse，把收藏收成行程（英文）",
+      "url": "https://x.com/Muse/status/2125284171417637002",
+      "blurb": "收藏了一堆旅行短片、又不想切回 Muse 应用的人，可以看官方这条：直接私信 Instagram 上的 Muse，让它把收藏收成可以执行的计划，帖子只有约二十秒的片子，没写要不要先连自己的账号、哪些地区能私信、收藏读不到时怎么办。",
+      "section": "official",
+      "tags": ["视频", "上手"],
       "aliases": ["X"]
     },
     {
@@ -3057,6 +3077,56 @@
       "blurb": "日本账号想先看 Try On 能做什么的人，可以看他 11 月 19 日用自己的 Muse 拿本国店的帽子和羽绒服试穿，片里讲清现在看出的是外形、尺码不保证，并对照 ChatGPT 与 Google 的试穿以及交照片前要看的设置；试穿图是 Muse 生成的，不代表实际尺码和穿着感。",
       "section": "tutorials",
       "tags": ["视频", "日文", "购物", "对比"],
+      "aliases": ["YouTube"]
+    },
+    {
+      "id": "bilibili-read-cv54050140",
+      "added": "2026-11-25",
+      "title": "专栏实测：让云电脑翻完 GitHub 热榜、做十秒视频和早九点优惠看板",
+      "url": "https://www.bilibili.com/read/cv54050140",
+      "blurb": "已经能登录 Muse、想用当周免费额度试一轮小任务的人，可以看作者让云电脑自己翻完 GitHub 热榜、把一张图做成带声音的 10 秒视频，并做出每天早上 9 点自动更新的优惠看板，作者称这一圈只用了额度的 4%，篇幅只覆盖这五项。",
+      "section": "tutorials",
+      "tags": ["上手", "电脑操作", "用量", "视频"],
+      "aliases": ["B站"]
+    },
+    {
+      "id": "jike-6b03e8e23f8c",
+      "added": "2026-11-25",
+      "title": "即刻教程：把 GitHub 仓库交给 Muse，让它每日维护 GEO 站点",
+      "url": "https://m.okjike.com/originalPosts/6b03e8e23f8cdf331f5aab26",
+      "blurb": "想用个人智能体养品牌站点的人可以看作者半天搭完站后把仓库和 GitHub token 交给 muse.ai 让它每日补内容、做 SEO、接谷歌分析并主动汇报，步骤里还要自己买域名、用 V0 部署，GEO 见效也需要时间。",
+      "section": "tutorials",
+      "tags": ["上手", "电脑操作"],
+      "aliases": ["即刻"]
+    },
+    {
+      "id": "x-andyfeng2016-094197",
+      "added": "2026-11-25",
+      "title": "用 Muse 把一百集十秒短片剪成卡点长片：节拍、切片和踩坑",
+      "url": "https://x.com/andyfeng2016/status/2125194098219094197",
+      "blurb": "想把很多条十秒短片收成一支卡点长片、又不想自己开剪辑软件的人，可以按这篇让 Muse 用 ffmpeg 和 Python 做节拍分析、二百五十一个切片、双语字幕和三秒片头，商业歌曲要自己提供，开屏时刻大多按统一编排估算，xfade 拼接前两路都要先统一成每秒三十帧。",
+      "section": "tutorials",
+      "tags": ["视频", "坑", "电脑操作", "上手"],
+      "aliases": ["X"]
+    },
+    {
+      "id": "youtube-gmnkokaa1e4",
+      "added": "2026-11-25",
+      "title": "用限制分享链接把口播交给 Muse 剪：本机二十八分钟，Modal 六十八秒（日文）",
+      "url": "https://www.youtube.com/watch?v=GmnKokAa1e4",
+      "blurb": "想在没有剪辑软件的手机或 Chromebook 上把口播素材交给 Muse 云电脑剪的人，可以看他用限制分享链接把片子丢进约 1.5 核、无 GPU、约 150GB 的 Muse PC，走 FFmpeg、Whisper 和 Remotion，7 分钟素材本机编码约 28 分钟、改走 Modal 约 68 秒（月 30 美元免费额度内），片尾对照一次出片和补字幕动画的第二次；他不接 Drive 连接器、只适合靠文字稿剪的口播，音乐和 vlog 不好用。",
+      "section": "tutorials",
+      "tags": ["视频", "日文", "电脑操作", "上手"],
+      "aliases": ["YouTube"]
+    },
+    {
+      "id": "youtube-y0k-6kcvzky",
+      "added": "2026-11-25",
+      "title": "让 Muse 租 Colab 的 L4：一分半口播头像片自己不用开界面（日文）",
+      "url": "https://www.youtube.com/watch?v=y0k_6kCVzkY",
+      "blurb": "想让 Muse 做带讲解头像的一分半短片、又不想自己开 Colab 的人，可以看他把题目丢给云电脑，由它用 Colab CLI 租 L4 做出图、旁白和口型再叠幻灯片字幕，作者一次都没打开 Colab 画面；免费档禁远程操作、要付费套餐且计算单元用完会停，第一次要过登录和「此站点始终允许」的审批卡。",
+      "section": "tutorials",
+      "tags": ["视频", "日文", "电脑操作", "上手"],
       "aliases": ["YouTube"]
     },
     {
@@ -7898,6 +7968,106 @@
       "section": "cases",
       "tags": ["视频", "日文", "用量", "上手"],
       "aliases": ["YouTube"]
+    },
+    {
+      "id": "note-items-6e59ccd8b548ac4e06d1",
+      "added": "2026-11-25",
+      "title": "用 Instagram 连接器整理约 1900 条保存帖，分页会悄悄漏件（日文）",
+      "url": "https://qiita.com/hiroomi0910/items/6e59ccd8b548ac4e06d1",
+      "blurb": "保存帖堆到约 1900 条、不想手分的人，能看到作者让 Muse 经账号中心操作 Instagram、只做新增分类、50 条一批等人确认，最终拿到 1714 件里的 1445 件分进 15 个合集，反向再扫才找回 50 件漏网，约 195 件接口始终不返回，合集件数显示还会滞后。",
+      "section": "cases",
+      "tags": ["插件", "坑", "电脑操作", "日文"],
+      "aliases": ["note"]
+    },
+    {
+      "id": "note-items-8d8b1fcfedd98ac4aeda",
+      "added": "2026-11-25",
+      "title": "让 Gemini 当怀疑方，给 Muse 写的稿做公开前评审（日文）",
+      "url": "https://qiita.com/musing_lab/items/8d8b1fcfedd98ac4aeda",
+      "blurb": "已经把小站交给 Muse、又担心同一模型既写又审的人，能看到用免费档 Gemini 接口做批评、密钥放保险柜、模型清单里轮换 404 和 503，开场那次评审 1522 令牌就改了结构和「委托」定义，煽动标题被拒，效果要等到约 12 月 20 日用浏览和公开后修改次数再比。",
+      "section": "cases",
+      "tags": ["编制", "插件", "上手", "日文"],
+      "aliases": ["note"]
+    },
+    {
+      "id": "note-n-n441972f32ac1",
+      "added": "2026-11-25",
+      "title": "用浏览器扩展和日历，把续约与返现节点交给 Muse 盯（日文）",
+      "url": "https://note.com/hot_thyme7504/n/n441972f32ac1",
+      "blurb": "记不住合同和年付节点的人，能看到作者靠 Google 账号联动提前解约了不怎么用的学习应用，又在本机扩展里核对宽带返现条件、把一年后的收款邮件写进日历并附上当时页面要点，Gemini 当时写不进日历而 Claude 能写，这次没测付款和解约是否真由 Muse 点下去。",
+      "section": "cases",
+      "tags": ["上手", "插件", "电脑操作", "日文"],
+      "aliases": ["note"]
+    },
+    {
+      "id": "note-items-692d899004c61aac1255",
+      "added": "2026-11-25",
+      "title": "让 Muse 主持 Claude 与 ChatGPT 对辩，公司名才开始收敛（日文）",
+      "url": "https://qiita.com/gimn7tztc/items/692d899004c61aac1255",
+      "blurb": "要把几个聊天模型的方案收到一个能拍板的名单的人，能看到 Muse 当司会把一方回复递给另一方、用国税厅法人番号站核对同名，ChatGPT 报过的 3 家完全一致后来被证实，Claude 说找不到其实有两家，条件被模型私自加码时会被司会打回，名字本身还没定。",
+      "section": "cases",
+      "tags": ["编制", "上手", "日文"],
+      "aliases": ["note"]
+    },
+    {
+      "id": "reddit-1y40h4d-what-ive-learned-from-using-muse-as-an-actual",
+      "added": "2026-11-25",
+      "title": "几周把 Muse 当成生活运营：邮件分拣、只汇报不代买、两只 Muse 用家庭板交接（英文）",
+      "url": "https://www.reddit.com/r/MuseAgent/comments/1y40h4d/what_ive_learned_from_using_muse_as_an_actual/",
+      "blurb": "已经不满足于一问一答、又怕智能体擅自下单的人，可以看这份几周实录：早晨把账单和促销分开，赛事报名和二手只做汇报，骑行活动对报价和设计稿，接上 Strava 后按训练计划看功率，和配偶的 Muse 只通过家庭板交换信息且不把对方的帖子当指令，抽奖要先读规则并禁止自动报名，帖里没有用量数字。",
+      "section": "cases",
+      "tags": ["上手", "编制", "插件"],
+      "aliases": ["Reddit"]
+    },
+    {
+      "id": "reddit-1y3yrd8-two-of-my-favorite-use-cases-i-came-up-with",
+      "added": "2026-11-25",
+      "title": "每天摘要 USPS 扫描件并滤掉广告信，清晨判断挡风玻璃会不会结霜（英文）",
+      "url": "https://www.reddit.com/r/MuseAgent/comments/1y3yrd8/two_of_my_favorite_use_cases_i_came_up_with/",
+      "blurb": "不想每天点开塞满广告的 USPS 邮件、也不想到了早晨才发现挡风玻璃结霜的人，可以直接改这两段定时提示：每天摘要扫描件并跳过预分拣标准邮件和明显广告，清晨六点按过夜低温、露点、晴朗小风或雨后转冰决定要不要提醒，作者说条件不成立就不打扰，帖里没写连的是哪家天气或邮件接口。",
+      "section": "cases",
+      "tags": ["上手", "编制"],
+      "aliases": ["Reddit"]
+    },
+    {
+      "id": "substack-p-letting-meta-muse-look-over-my-shoulder",
+      "added": "2026-11-25",
+      "title": "让 Meta Muse 从肩后看屏幕：默认关闭的截图闸挡不住它自己（英文）",
+      "url": "https://readplanet.substack.com/p/letting-meta-muse-look-over-my-shoulder",
+      "blurb": "已经用 SSH 把 Linux 桌面交给 Muse 的人，能看到作者做的一套默认关闭、只回一张图的本地套接字：亲手打开后云端虚拟机才能读报错窗口，同一 SSH 用户自己就能把服务拉起来，锁屏还会交回全黑图，文里没有可贴的完整脚本。",
+      "section": "cases",
+      "tags": ["安全", "电脑操作", "坑"],
+      "aliases": ["Substack"]
+    },
+    {
+      "id": "news-articles-c9gkld2l38y6o",
+      "added": "2026-11-25",
+      "title": "英国上线前用了一周：邮件抢着回，火车票和亚马逊都没办完（英文）",
+      "url": "https://www.bbc.com/news/articles/c9gkld2l38y6o",
+      "blurb": "准备在英国把邮件和订票交给 Muse 的人，能看到 BBC 科技编辑上线前用了一周的记录：她接上个人邮箱、日历和短信、没接 BBC 工作账号，新邮件会被先摘要并代拟回复，但一句出行邀约被写成整套路线，对话还会卡在互相道谢里；火车票只搜到、订不了她常用且更便宜的应用，找亚马逊架子时店家已经拦截、它仍反复说页面在加载并空等约一小时，WhatsApp 只能单开和它的对话，发送和下单默认每次都要再点允许。",
+      "section": "cases",
+      "tags": ["上手", "坑", "购物", "安全", "插件"],
+      "aliases": ["科技媒体"]
+    },
+    {
+      "id": "x-rishimody-766807",
+      "added": "2026-11-25",
+      "title": "在 Spaces 里做了 Things 式待办，让 Muse 直接改里面的条目（英文）",
+      "url": "https://x.com/rishimody/status/2124997517972766807",
+      "blurb": "已经会用 Spaces、想把待办从独立应用搬进 Muse 的人，可以看他先做了一个 Things 式清单，并让智能体直接操作这个空间，帖子只有成品截图、没有提示词，笔记、健康和账本他还没做。",
+      "section": "cases",
+      "tags": ["上手"],
+      "aliases": ["X"]
+    },
+    {
+      "id": "x-777iiikk-881770",
+      "added": "2026-11-25",
+      "title": "把赏金站技能丢给 Muse 后，它自己注册并领到一笔 USDC",
+      "url": "https://x.com/777iiikk/status/2125238893666881770",
+      "blurb": "想看 Muse 能不能自己跑完注册、建钱包和交代码的人，可以看他把赏金站技能丢进去之后，账号和钱包地址都没经手并领到一笔链上 USDC，奖金按公开指标排名结算，金额和能否再复现都只在他的截图里，技能链接带有他的推荐路径。",
+      "section": "cases",
+      "tags": ["电脑操作", "上手"],
+      "aliases": ["X"]
     },
     {
       "id": "awesome-muse-connectors",
@@ -13300,6 +13470,156 @@
       "aliases": ["科技媒体"]
     },
     {
+      "id": "github-neito112-muse-ai-cli",
+      "added": "2026-11-25",
+      "title": "muse.ai-cli（Windows 接入）：让个人 Muse 的云电脑用 SSH 操作你的 Windows",
+      "url": "https://github.com/Neito112/muse.ai-cli",
+      "blurb": "想让个人 Muse 的云电脑经 Tailscale 在自己的 Windows 上跑命令、改文件的人，可以按仓库里两条 PowerShell 装上 OpenSSH 并写入虚拟机公钥，正文是越南文，密钥登录仍被拒绝时还有一份只改权限和管理员授权文件的修复脚本，收回权限要自己删掉公钥或关掉 sshd。",
+      "section": "skills",
+      "tags": ["开源", "电脑操作", "排障", "安全", "上手"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "github-dani-miraba-muse-vm-shell",
+      "added": "2026-11-25",
+      "title": "VM Shell（云电脑终端）：在个人 Muse 的 Space 里开不耗模型额度的持久终端（英文）",
+      "url": "https://github.com/dani-miraba/muse-vm-shell",
+      "blurb": "想在个人 Muse 的云电脑里用 vim、top 这类交互命令、又不想为翻目录再花一轮模型额度的人，可以把这个实验性 Space 装进去得到最多 8 个会记住当前目录的终端，出网命令会在所有聊天窗口弹出审批并一直挂起直到你点允许，单元格被换掉后只有家目录里的文件还在。",
+      "section": "skills",
+      "tags": ["开源", "电脑操作", "用量", "安全", "坑"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "github-ak1ra-prg-muse-for-dotos",
+      "added": "2026-11-25",
+      "title": "MUSE for DotOS（手表固件）：在 M5Stack 秒表的 DotOS 上加装个人 Muse 配件（日文）",
+      "url": "https://github.com/Ak1rA-PRG/MUSE-for-DotOS",
+      "blurb": "已经在用 M5Stack StopWatch 的 DotOS、又想从手表里打开个人 Muse 并显示日文回复的人，可以用这份补丁按锁定的官方 SDK 修订自行编译并只写入 MUSE 分区，仓库不含 SDK、角色素材和令牌，刷写前要先回到 CLOCK 画面，生成的固件里带有你自己的令牌不要外传。",
+      "section": "skills",
+      "tags": ["开源", "插件", "上手", "日文", "坑"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "github-jidadiao-muse2grok",
+      "added": "2026-11-25",
+      "title": "Muse2Grok（任务委托桥）：让个人 Muse 把任务交给 Grok Bot 并在原聊天收回答复",
+      "url": "https://github.com/JidaDiao/muse2grok",
+      "blurb": "已经有个人 Muse 和能收 Webhook 的 Grok Bot、又想在原来的 Muse 聊天里看到对方答复的人，可以自托管这个只用 Python 标准库的桥，一次部署只绑一个聊天，账本里会留下委托正文，能读到 Muse 令牌的进程就能用这个聊天标识提交请求。",
+      "section": "skills",
+      "tags": ["开源", "插件", "安全"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "github-stansniper168-design-aipi-multifi",
+      "added": "2026-11-25",
+      "title": "aipi-multifi（多网络固件）：让 AIPI Lite 个人 Muse 配件记住 8 个 Wi-Fi（英文）",
+      "url": "https://github.com/stansniper168-design/aipi-multifi",
+      "blurb": "AIPI Lite 官方固件只记一个 Wi-Fi、一离开家里就掉线的人，可以按仓库锁定的官方 SDK 提交自己编译多网络版本，作者在真机上确认过热点关掉后会自己跳回原来的网络，刷写不能整片擦除，第二组网络必须先在应用里断开再添加，盒子只能看到 2.4GHz。",
+      "section": "skills",
+      "tags": ["开源", "插件", "排障", "坑"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "github-mayaakarin-muse-gadgets-mp3",
+      "added": "2026-11-25",
+      "title": "media.file（配件播 MP3）：让个人 Muse 把云电脑里的语音文件送到配件扬声器（日文）",
+      "url": "https://github.com/mayaakarin/muse-gadgets-MP3",
+      "blurb": "想让个人 Muse 配件单独播放云电脑里 MP3 的人，可以把这份补丁打到官方 SDK 的指定提交上并打开编译开关，单文件上限 512 KB、大约 60 秒，播放不跟当轮文字同步，正在播时再送一条会因为内存不够而解码失败。",
+      "section": "skills",
+      "tags": ["开源", "插件", "日文", "坑"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "github-ruirui-kouno-avatar-muse-connector",
+      "added": "2026-11-25",
+      "title": "avatar-muse-connector（形象连接器）：用自定义连接器给个人 Muse 接上能说能听的形象（日文）",
+      "url": "https://github.com/ruirui-kouno/avatar-muse-connector",
+      "blurb": "自己的形象桥已经在跑、想让个人 Muse 用自定义连接器说话、听写和做简报的人，可以在本机生成配对文件后导入，背景切换事件当前舞台还收不到，访问密钥只留在权限收紧的本机配置里，这个连接器不包含形象程序本身。",
+      "section": "skills",
+      "tags": ["开源", "插件", "日文", "上手"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "github-sei5580-avatar-manager",
+      "added": "2026-11-25",
+      "title": "avatar-manager（形象档案）：在个人 Muse 里保存多套形象并排队切换（日文）",
+      "url": "https://github.com/Sei5580/avatar-manager",
+      "blurb": "想在个人 Muse 里给多套形象分别记下称呼、口吻、参考图和切换队列的人，可以把这份空库做成 Space，应用自己改不了正在用的形象，真正切换要靠聊天里的智能体去执行，种子数据已清空，环境相关的定时任务要自己改。",
+      "section": "skills",
+      "tags": ["开源", "编制", "日文", "坑"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "github-kacky000-aeru-voice-mcp",
+      "added": "2026-11-25",
+      "title": "aeru-voice-mcp（语音读帖）：让个人 Muse 用声音读写 AERU 这一个 Misskey 站点（日文）",
+      "url": "https://github.com/kacky000/aeru-voice-mcp",
+      "blurb": "想让个人 Muse 朗读并代发 AERU SNS 帖子、又不想把令牌交到别人服务器的人，可以把仓库交给自己的 Muse，在安全输入卡里填自己的令牌，发帖前它会先念一遍文案，从 Echo 音箱喊话叫醒 Muse 的那一段仍是未公开的试用，现在还得由旁边的人在屏幕上转达。",
+      "section": "skills",
+      "tags": ["开源", "插件", "日文", "上手"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "note-items-354659f68ff478368098",
+      "added": "2026-11-25",
+      "title": "解约 Desktop Commander 后，用 Muse 经 SSH 指挥家里的 Mac（日文）",
+      "url": "https://qiita.com/sakumori/items/354659f68ff478368098",
+      "blurb": "本机远程操作月费和次数都顶不住的人，能看到 11 月 23 日这次改法：Muse 经 Tailscale 用专用用户进 Mac mini，长 SSH 约 35 秒会断所以 Codex 在 Mac 侧脱离运行、完结邮件打到 Muse 邮箱，当天给泡泡解谜打了 7 轮并出了 5 个 TestFlight 包，8GB 机器叠本地模型和模拟器时负载到过 79。",
+      "section": "skills",
+      "tags": ["电脑操作", "插件", "排障", "用量", "日文"],
+      "aliases": ["note"]
+    },
+    {
+      "id": "note-articles-muse-free-tailscale-wsl",
+      "added": "2026-11-25",
+      "title": "给免费档 Muse 用 Tailscale 进隔离的家用 WSL（日文）",
+      "url": "https://zenn.dev/urin/articles/muse-free-tailscale-wsl",
+      "blurb": "想让免费档 Muse 的虚机进家里开发机、又不想它碰到 Windows 盘的人，能看到专用 WSL、关掉自动挂载、只开公钥 SSH、portproxy 转到固定地址，以及用计划任务把会话撑住，文中只验证了 ssh 能进 user，没有写 Muse 在里面实际编过什么。",
+      "section": "skills",
+      "tags": ["插件", "电脑操作", "安全", "上手", "日文"],
+      "aliases": ["note"]
+    },
+    {
+      "id": "reddit-1y44dk8-i-had-muse-help-me-sort-293-skills-into-ten-p",
+      "added": "2026-11-25",
+      "title": "293 个技能分成十个安装包：Muse Skill Collection（缪斯技能合集）（英文）",
+      "url": "https://www.reddit.com/r/MuseAgent/comments/1y44dk8/i_had_muse_help_me_sort_293_skills_into_ten_packs/",
+      "blurb": "技能散落在多个仓库、想按工种打包安装的人，可以打开这条和仓库 muse-skill-collection/muse-skills-collection（缪斯技能合集）：293 个原为 Claude 编写的技能被改成 Muse 格式并分成十包，安装说明写给 Muse 自己执行，原作者署名留在各包里，仓库写明多数是 MIT 或 Apache、有一条非商用许可、51 个源仓库未声明许可证，回帖建议不要一次装齐并先检查可执行代码。",
+      "section": "skills",
+      "tags": ["插件", "开源"],
+      "aliases": ["Reddit"]
+    },
+    {
+      "id": "x-gopuff-490794",
+      "added": "2026-11-25",
+      "title": "Gopuff 接入 Muse：对话里连上连接器，下单前仍要你批准（英文）",
+      "url": "https://x.com/gopuff/status/2125280528798490794",
+      "blurb": "人在 Gopuff 配送范围、想让 Muse 买日用品的人，可以按官方这条从设置里的连接器进入，或在对话里说连上 Gopuff，五千多种商品下单前要你点批准、最快约十五分钟送到，帖子没写覆盖城市和用哪一种付款。",
+      "section": "skills",
+      "tags": ["插件", "购物"],
+      "aliases": ["X"]
+    },
+    {
+      "id": "x-ojigineko-tips-193549",
+      "added": "2026-11-25",
+      "title": "把新公开的 Canva MCP 接到 Muse，封面文字还能再改（日文）",
+      "url": "https://x.com/ojigineko_tips/status/2125192271977193549",
+      "blurb": "想让 Muse 出封面、又怕字烙进图里改不了的人，可以看他当天把 Canva 的 MCP 接上后用一句话出缩略图，字是文本层所以还能改，步骤只写了把这条帖子丢回给 Muse 去连，没有权限范围和失败时的画面。",
+      "section": "skills",
+      "tags": ["插件", "日文", "上手"],
+      "aliases": ["X"]
+    },
+    {
+      "id": "x-shimis-88-647220",
+      "added": "2026-11-25",
+      "title": "五条装进 Muse 的开源视频技能：电影感、动画、广告和火柴人",
+      "url": "https://x.com/shimis_88/status/2125252873252647220",
+      "blurb": "还在让 Muse 一条条盲抽十秒短片、人物对不上的人，可以按用途对上五条开源技能，分别做电影感长片、动画成片、广告分镜、火柴人一条龙，以及二百多条带来源的提示词，第六条手绘口播不走 Muse、要装到本机的 Codex 或 Claude Code，帖子没有逐条安装日志。",
+      "section": "skills",
+      "tags": ["插件", "开源", "视频"],
+      "aliases": ["X"]
+    },
+    {
       "id": "aimultiple-always-on-agents",
       "added": "2026-10-06",
       "title": "五家常驻智能体横评：Dots、Grok Bot、Muse、Hermes、OpenClaw",
@@ -14868,6 +15188,36 @@
       "section": "reviews",
       "tags": ["视频", "对比", "用量", "坑"],
       "aliases": ["B站"]
+    },
+    {
+      "id": "jike-6b058aae3838",
+      "added": "2026-11-25",
+      "title": "即刻对照：小豆对标 Muse 办事，作者认为国内抄这套走不通",
+      "url": "https://m.okjike.com/originalPosts/6b058aae38389f5993b0509d",
+      "blurb": "关心国内个人助手要不要抄 Muse 办事能力的人可以看这篇对照小豆公测的长评：作者用北美订机票填信用卡、干等客服电话等例子解释 Muse 为何成立，并认为国内点评排队和外卖机票已经够顺、硬抄只会变成花哨遥控器，文中没有作者自己的 Muse 操作记录。",
+      "section": "reviews",
+      "tags": ["对比"],
+      "aliases": ["即刻"]
+    },
+    {
+      "id": "linkedin-pulse-metas-muse-buys-shoppers-without-showing-them",
+      "added": "2026-11-25",
+      "title": "品牌先问 Meta 三件事：费用、排序，以及能不能认出 Muse 下的单（英文）",
+      "url": "https://www.linkedin.com/pulse/metas-muse-buys-shoppers-without-showing-them-ad-ask-meta-brownstein-bja6c",
+      "blurb": "投放和电商负责人，可以按这篇十一月三日的清单核对 Muse 读的是无障碍树里的可见文字、没存卡时用绑定商家和金额且限时的一次性 Link 卡、应用里没有广告位但商家站上的访问仍可能被拿去在 Instagram 再营销，而分成收多少、排序看什么、店家能不能把代下单和真人分开这三件事 Meta 当时都没公布；欧盟是否开放、页面像素会不会照常执行，也是作者标出的未解问题，不是他跑过的订单。",
+      "section": "reviews",
+      "tags": ["购物", "对比", "小企业", "坑"],
+      "aliases": ["LinkedIn"]
+    },
+    {
+      "id": "x-ethanwalkerman-486818",
+      "added": "2026-11-25",
+      "title": "一万一千次购物测试里，Muse 平均只看三个商品页（英文）",
+      "url": "https://x.com/ethanwalkerman/status/2125207481580486818",
+      "blurb": "想知道购物智能体会把单子带去哪的人，可以看这条转述的测试：Muse 浏览时平均只打开三个商品页，搜索从 Meta 自己的目录起、回答里约百分之二十六链到沃尔玛，亚马逊在全部结账测试里拦住了它，数字来自 a16z 与 Prompting Company 的一万一千次测试，不是作者本人下的单。",
+      "section": "reviews",
+      "tags": ["购物", "对比"],
+      "aliases": ["X"]
     },
     {
       "id": "hermes-agent",
@@ -18745,6 +19095,86 @@
       "title": "多人撞见 Muse 在规划和记忆文件里自称 Claude（英文）",
       "url": "https://www.reddit.com/r/MuseAgent/comments/1y2cq9f/has_anyone_else_caught_muse_calling_itself_claude/",
       "blurb": "在 Markdown、网盘备份或只读账号名里看到 Claude 字样、怀疑智能体串台的人，可以看这楼：楼主两次在规划文档里抓到自称 Claude，回帖有人看到它建议用户名 claude-ro、每周备份文件名全是 claude，还有技能服务端统计约七到九成 Muse 用户报名为 Claude，没有官方说明，也没有可安装的修复包。",
+      "section": "community",
+      "tags": ["坑"],
+      "aliases": ["Reddit"]
+    },
+    {
+      "id": "github-issues-508",
+      "added": "2026-11-25",
+      "title": "配件实时通话下行全是静音（Issue 508）：同一固件隔天只剩保活静音（英文）",
+      "url": "https://github.com/facebookincubator/muse-gadget-sdk/issues/508",
+      "blurb": "自己做 ESP32-S3 个人 Muse 配件、实时通话能连上但扬声器全程没声的人，可以对照官方仓库这篇排查：文字回复正常，下行音频全是零，作者用同一份固件对比了 11 月 23 日有声和 24 日只剩保活静音，并排除了本机解码、硬件和麦克风静音，帖子还在问服务端是否改过，没有结论。",
+      "section": "community",
+      "tags": ["排障", "坑", "开源", "插件"],
+      "aliases": ["GitHub"]
+    },
+    {
+      "id": "note-n-nfdc5d776c912",
+      "added": "2026-11-25",
+      "title": "在 Muse 虚机里塞进本地小模型：抽取能过、分类会偏（日文）",
+      "url": "https://note.com/butterflyhead/n/nfdc5d776c912",
+      "blurb": "想把判断从云端模型卸到虚机里省额度的人，能看到作者放弃约 1.5GB 的 Ollama、改用 23MB 的 llama.cpp，Qwen2.5 一点五 B 在 12 题里对 8 题、零点五 B 对 4 题，两次抽取全对，分类错题全倒向同一标签，下载中途虚机被换过要用续传，实际省了多少额度没有测。",
+      "section": "community",
+      "tags": ["电脑操作", "用量", "坑", "日文"],
+      "aliases": ["note"]
+    },
+    {
+      "id": "note-articles-6fd5c67da36ec2",
+      "added": "2026-11-25",
+      "title": "手表版 Muse 是真的，但「手腕上什么都能办」被写过了（日文）",
+      "url": "https://zenn.dev/ocha50107/articles/6fd5c67da36ec2",
+      "blurb": "看到「手腕上就能交代任务」报道的人，能看到作者核对：Apple Watch 伴侣应用在美日商店和 15.0 发行说明里都有、日本实机可文字和语音输入，官方只有 X 帖没有 Newsroom，能确认的是输入、显示、进度和批准，购买能否在表上完成、日本通话和 Wear OS 机型都未证实，watchOS 要求后来从 9 改到 10。",
+      "section": "community",
+      "tags": ["文档", "对比", "日文"],
+      "aliases": ["note"]
+    },
+    {
+      "id": "reddit-1y4ct6w-update-chatstarted-cloud-browser-tasks-still",
+      "added": "2026-11-25",
+      "title": "聊天发起的云端浏览器任务一直停在排队，定时任务和本机 Chrome 正常（英文）",
+      "url": "https://www.reddit.com/r/MuseAgent/comments/1y4ct6w/update_chatstarted_cloud_browser_tasks_still/",
+      "blurb": "从聊天里打开云端浏览器却一直停在 Queued、步骤为 0 的人，可以对照这条记录：出站配置在 11 月 19 日 13:57 UTC 后不再发放，同一账号的定时任务和钉在 Mac 上的 Chrome 仍能分到浏览器，23 日重启虚拟机两次无效，用完整任务号关闭会返回找不到窗口，作者已向团队报障，帖下还没有别人确认同样现象。",
+      "section": "community",
+      "tags": ["坑", "排障", "电脑操作"],
+      "aliases": ["Reddit"]
+    },
+    {
+      "id": "reddit-1y3lybr-does-voice-mode-have-the-same-reasoning-in-th",
+      "added": "2026-11-25",
+      "title": "语音模式跟不住签到技能，取消通话后却补出完整文字回复（英文）",
+      "url": "https://www.reddit.com/r/MuseAgent/comments/1y3lybr/does_voice_mode_have_the_same_reasoning_in_the/",
+      "blurb": "觉得语音比打字容易丢步骤的人，可以看这个对照：作者的签到技能在文字里能走完，语音里会卡住，有一次中途取消语音后那句敷衍消失并立刻补上一段完整文字，回帖有人猜是少推理的即时模式、付费档开车时仍能引用旧对话，也有人说十几分钟语音之后记忆变飘，没有模型说明书。",
+      "section": "community",
+      "tags": ["坑"],
+      "aliases": ["Reddit"]
+    },
+    {
+      "id": "reddit-1y4g5no-lost-access-to-muse-after-moving-from-the-us",
+      "added": "2026-11-25",
+      "title": "从美国搬到英国后 Muse 仍显示未开放，已购代币取不回（英文）",
+      "url": "https://www.reddit.com/r/MuseAgent/comments/1y4g5no/lost_access_to_muse_after_moving_from_the_us_to/",
+      "blurb": "人已从美国搬到英国、当地刚开放却打不开应用的人，可以看这个还没人解开的账号：11 月 18 日经 Meta Pay 买了 4.8 亿代币、花费 89 英镑，资料和付款地址已改成英国，账号中心仍能看到 Muse，手机应用却显示尚未开放，作者交了故障编号，帖下没有转区或把代币挪到新号的办法。",
+      "section": "community",
+      "tags": ["坑", "用量"],
+      "aliases": ["Reddit"]
+    },
+    {
+      "id": "reddit-1y4bap0-any-museai-users-got-this-you-dont-have-acces",
+      "added": "2026-11-25",
+      "title": "11 月 24 日应用和网页突然显示未开放，WhatsApp 里仍能对话（英文）",
+      "url": "https://www.reddit.com/r/MuseAgent/comments/1y4bap0/any_museai_users_got_this_you_dont_have_access/",
+      "blurb": "11 月 24 日应用和 muse.ai 同时变成尚未开放或出错、生意还压在旧号上的人，可以看这楼：楼主换远程电脑同样被挡，WhatsApp 里仍能对话，回帖有人用新邮箱注册的号可以进、原来的生意号仍被弹窗挡住且联系不上支持，没有官方故障说明。",
+      "section": "community",
+      "tags": ["坑", "排障"],
+      "aliases": ["Reddit"]
+    },
+    {
+      "id": "reddit-1y4hs0t-voice-calling",
+      "added": "2026-11-25",
+      "title": "让 Muse 给诊所和牙医打电话，对方以 HIPAA 挂断（英文）",
+      "url": "https://www.reddit.com/r/MuseAgent/comments/1y4hs0t/voice_calling/",
+      "blurb": "想让 Muse 打电话约体检或洗牙的人，可以看这次结果：医生办公室两次不说话就挂断，牙医以美国医疗隐私规则 HIPAA 为由挂断，回帖认为诊所通常不能向未授权联系人确认你是不是病人，有人改发邮件，把助理写成授权联系人只是猜测，帖里没有约成功的例子。",
       "section": "community",
       "tags": ["坑"],
       "aliases": ["Reddit"]
